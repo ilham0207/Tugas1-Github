@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 6 RWD Bootstrap</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+<!-- jQuery + DataTables -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="container-fluid p-0">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="bannerrzl1.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="bannerrzl2.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="bannerrzl3.jpg" class="d-block w-100">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+ <!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="logo-rzl">RZL</div>
+      <span class="ms-2 fw-bold">Razeal</span>
+    </a>
+
+    <!-- TOGGLER -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('mystudy')">MyStudy</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('gallery')">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('datatable')">Datatable</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('login')">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- CONTENT -->
+  <div class="container my-4">
+    <div class="row">
+<!-- SIDEBAR -->
+<aside class="col-md-3">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      Website Links
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <a href="https://learning.nfacademy.id/?redirect=0" target="_blank" class="text-decoration-none">
+          NFAcademy
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="https://nurulfikri.ac.id" target="_blank" class="text-decoration-none">
+          Nurul Fikri
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="https://www.wikipedia.org" target="_blank" class="text-decoration-none">
+          Wikipedia
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="https://www.w3schools.com" target="_blank" class="text-decoration-none">
+          W3Schools
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="https://getbootstrap.com" target="_blank" class="text-decoration-none">
+          Bootstrap
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+
+
+      <!-- MAIN CONTENT -->
+      <main class="col-md-9" id="mainContent">
+        <div class="text-center text-muted p-5">
+          <h4>Selamat Datang di Razeal Website</h4>
+          <p>Silakan pilih menu di atas untuk menampilkan konten di sini.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2025 Dibuat oleh Muhammad Arifin Ilham - Universitas Muhammadiyah Jakarta</p>
+    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    function loadContent(page) {
+      let content = "";
+      if(page === "home") {
+        content = `
+          <h2>Personal Profile</h2>
+          <p>Halo, nama saya <b>Muhammad Arifin Ilham</b>.</p>
+    <p>Saya mahasiswa dari <b>Universitas Muhammadiyah Jakarta,</b> 
+        yang sedang menempuh studi di bidang Informatika. 
+        Saya memiliki minat yang cukup besar di bidang <b>Web Development.</b>
+        Dengan semangat belajar yang tinggi, saya berusaha untuk terus 
+        mengembangkan keterampilan dan pengetahuan saya di bidang ini.</p>
+
+        <fieldset>
+        <legend>Tentang Saya</legend>
+        <div class="profile-container">
+            <img src="img7.jpg" alt="Foto Profil">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>: Muhammad Arifin Ilham</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>: 23040700092@student.umj.ac.id</td>
+                </tr>
+                <tr>
+                    <td>Kampus</td>
+                    <td>: Universitas Muhammadiyah Jakarta</td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td>: Teknik Informatika</td>
+                </tr>
+                <tr>
+                    <td>Telepon</td>
+                    <td>: 0887-2356-461</td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+        `;
+      } 
+      else if(page === "mystudy") {
+        content = `
+          <h2>Riwayat Pendidikan</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr><th>Tahun</th><th>Sekolah</th><th>Keterangan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2011-2017</td><td>SD Negeri 03 Cempaka Putih</td><td>Lulus</td></tr>
+              <tr><td>2017-2020</td><td>SMP Negeri 28 Jakarta</td><td>Lulus</td></tr>
+              <tr><td>2020-2023</td><td>SMK Negeri 39 Jakarta</td><td>Lulus</td></tr>
+              <tr><td>2023-Sekarang</td><td>Universitas Muhammadiyah Jakarta</td><td>Mahasiswa</td></tr>
+            </tbody>
+          </table>
+        `;
+      } 
+      else if(page === "gallery") {
+        content = `
+          <h2>Gallery</h2>
+          <div class="row">
+            <div class="col-md-4"><img src="img1.jpg" class="img-fluid rounded"></div>
+            <div class="col-md-4"><img src="img4.jpg" class="img-fluid rounded"></div>
+            <div class="col-md-4"><img src="img3.jpg" class="img-fluid rounded"></div>
+          </div>
+        `;
+      } 
+else if(page === "datatable") {
+  content = `
+    <h2>Datatable</h2>
+    <table id="myTable" class="display">
+      <thead>
+        <tr>
+          <th style="text-align:left;">No</th>
+          <th style="text-align:left;">Nama</th>
+          <th style="text-align:left;">Umur</th>
+          <th style="text-align:left;">Prodi</th>
+          <th style="text-align:left;">Kota Asal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Andi</td><td>20</td><td>Informatika</td><td>Jakarta</td></tr>
+        <tr><td>2</td><td>Budi</td><td>21</td><td>Sistem Informasi</td><td>Bandung</td></tr>
+        <tr><td>3</td><td>Citra</td><td>22</td><td>Teknik Elektro</td><td>Depok</td></tr>
+        <tr><td>4</td><td>Dodi</td><td>23</td><td>Teknik Sipil</td><td>Bekasi</td></tr>
+        <tr><td>5</td><td>Wahyu</td><td>24</td><td>Teknik Mesin</td><td>Tangerang</td></tr>
+      </tbody>
+    </table>
+  `;
+
+  // setelah content dimasukkan ke DOM, aktifkan DataTables
+  setTimeout(() => {
+    $('#myTable').DataTable({
+      paging: true,
+      searching: true,
+      ordering: true
+    });
+  }, 100);
+}
+
+      else if(page === "login") {
+        content = `
+          <h2>Login</h2>
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        `;
+      }
+      document.getElementById("mainContent").innerHTML = content;
+    }
+  </script>
+</body>
+</html>

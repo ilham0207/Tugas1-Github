@@ -1,0 +1,91 @@
+header {
+  background: #007bff;
+}
+aside {
+  background: #f8f9fa;
+}
+main {
+  background: #e9ecef;
+}
+footer {
+  background: #343a40;
+}
+/* Navigation*/
+  .navbar-nav .nav-item {
+    margin-left: 20px; /* jarak antar menu */
+  }
+.nav-link {
+  color: #000;
+  font-weight: 500px;
+  word-spacing: 50px;
+}
+.nav-link:hover {
+  background-color: dimgray;
+  color: white;
+  border-radius: 5px;
+}
+.nav-link.active {
+  background-color: dimgray;
+  color: white;
+  border-radius: 5px;
+}
+/* Logo RZL */
+.logo-rzl {
+  width: 45px;
+  height: 45px;
+  background-color: #0d6efd; /* biru bootstrap */
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+/* Homepage Main Content */
+body {
+            margin: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+        h2 {
+            color: darkblue;
+        }
+        fieldset {
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 4px 8px;
+            vertical-align: top;
+        }
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+        }
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .profile-container img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        /* My Study Table */
+        .table-bordered {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .table-bordered th, .table-bordered td {
+            padding: 8px;
+            text-align: left;
+        }
+        /* Datatable*/
+        
